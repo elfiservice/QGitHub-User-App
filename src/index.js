@@ -5,12 +5,12 @@ import '../node_modules/font-awesome/css/font-awesome.min.css'
 import './index.css';
 import App from './containers/App';
 
-import promise from 'redux-promise'
-import { applyMiddleware ,createStore } from 'redux'
+import { createStore } from 'redux'
 import { Provider } from 'react-redux'
-import reducers from './reducers'
+import reducer from './reducers'
+import middleware from './middleware'
 
-const store = applyMiddleware(promise)(createStore)(reducers)
+const store = createStore(reducer, middleware)
 
 ReactDOM.render(
     <Provider store={store}><App /></Provider>,
