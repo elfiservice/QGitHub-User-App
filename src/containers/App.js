@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { getCurrentLocationOfUser, mountMapToDeveloperSelected } from '../actions/appActions'
 import { loadGoogleApi } from '../utils/googleApi'
 import SearchForm from '../components/SearchForm'
-
+import SearchResult from '../components/SearchResult'
 
 class App extends Component {
   componentDidMount() {
@@ -30,11 +30,13 @@ class App extends Component {
           <header className="App-header">
             <h1>Quick GitHub Users</h1>
             <p>
-                Location <code>{appData.currentLocationOfUser !== null 
+                Your Currenty Location is <code>{appData.currentLocationOfUser !== null 
                   ?  appData.currentLocationOfUser : 'getting current position...'}</code> 
             </p>
           </header>
           <SearchForm />
+          <SearchResult />
+
           <div id="mapHidden"></div>
       </div>
       )

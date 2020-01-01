@@ -12,17 +12,18 @@ export function handleInputChange(query) {
 
 export function searchDevOnGithub(searchTerm) {
     return dispatch => {
-       return searchUsersByFullname(searchTerm)
-        .then(result => {
-            if(result.total_count === 0) {
-                dispatch(searchDevOnGithubByLogin(searchTerm))
-            } else {
-                dispatch({type: SET_LIST_OF_DEVS, listOfDevs: result.items })
-            }
-            
-        })
+        dispatch(setSeachingMsg())
+        setTimeout(() =>  {
+            return searchUsersByFullname(searchTerm)
+                .then(result => {
+                    if(result.total_count === 0) {
+                        dispatch(searchDevOnGithubByLogin(searchTerm))
+                    } else {
+                        dispatch({type: SET_LIST_OF_DEVS, listOfDevs: result.items })
+                    } 
+                })   
+       } , 1500) 
     }
-
 }
 
 function searchDevOnGithubByLogin(searchTerm) {
@@ -33,4 +34,11 @@ function searchDevOnGithubByLogin(searchTerm) {
         })
     }
 
+}
+
+function setSeachingMsg() {
+    return {
+        type: SET_LIST_OF_DEVS,
+        listOfDevs: 'searching'
+    }
 }
