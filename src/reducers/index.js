@@ -1,9 +1,11 @@
 import { combineReducers } from 'redux'
 
-import appData from './appData' 
+import appData from './appData'
+import searchData from './searchData'
 
 const rootReducers = combineReducers({
-    appData
+    appData,
+    searchData
 })
 
 export default rootReducers

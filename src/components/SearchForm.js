@@ -1,29 +1,14 @@
 import React, { Component } from 'react'
 import InputText from './inputs/TypeText'
+import { connect } from 'react-redux'
+import { handleInputChange, searchDevOnGithub } from '../actions/searchActions'
 
 class SearchForm extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            search: '',
-        }
-        this._handleInputChange = this._handleInputChange.bind(this)
-    }
-
     _searchBtnClicked(e){
-
+        e.preventDefault()
+        this.props.searchDevOnGithub(this.props.searchData.searchInput)
     }
   
-    _handleInputChange(event) {
-      const target = event.target;
-      const value = target.value;
-      const name = target.name;
-  
-      this.setState({
-        [name]: value
-      });
-    }
-    
     render() {
         return (
             <div className="center-block">
@@ -32,8 +17,9 @@ class SearchForm extends Component {
                         name="search" 
                         placeholder="Search by name or username"
                         type="search"
-                        value={this.state.search}
-                        onChange={this._handleInputChange}
+                        value={this.props.searchData.searchInput}
+                        onChange={(e) => this.props.handleInputChange(e.target.value)}
+                        required
                         />
 
                     <button 
@@ -47,4 +33,10 @@ class SearchForm extends Component {
     }
 }
 
-export default SearchForm
+function mapStateToProps ({ searchData }) {
+    return {
+      searchData
+    }
+  }
+  
+export default connect(mapStateToProps, { handleInputChange, searchDevOnGithub })(SearchForm)
