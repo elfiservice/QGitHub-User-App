@@ -7,20 +7,20 @@ class SearchResult extends Component {
         const { listOfDevs } = this.props.searchData
         if(!listOfDevs) {
             return (
-                <div>
-                    <i>Type a name or username that we'll search for you</i>
+                <div className="search-result_msg-to-user">
+                    <i className="search-result_txt-muted">Type a name or username that we'll search for you</i>
                 </div>
             )
         } else if(listOfDevs === 'searching') {
             return (
-                <div>
-                    <i>Searching...</i>
+                <div className="search-result_msg-to-user">
+                    <i className="search-result_txt-muted">Searching...</i>
                 </div>
             )
         } else if(listOfDevs.length <= 0) {
             return (
-                <div>
-                    <b>No devs found</b>
+                <div className="search-result_msg-to-user">
+                    <b className="search-result_txt-muted">No devs found</b>
                 </div>
             )
         } else {
@@ -43,8 +43,10 @@ class SearchResult extends Component {
 
     render() {
         return (
-            <div>
-                {this._mountContent()}
+            <div className="search-result-content container-scroll">
+                <div className="messages content-scroll">
+                    {this._mountContent()}
+                </div>
             </div>
         )
     }

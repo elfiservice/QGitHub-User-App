@@ -1,3 +1,12 @@
+.search-result_msg-to-user {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.search-result_txt-muted {
+    color: #9e9c9c;
+}
+
 .dev-avatar {
     width: 60px;
     height: 60px;
@@ -19,6 +28,7 @@
     padding: 20px;
     background: white;
     display: flex;
+    margin: 20px;
 }
   
 .dev-details {
@@ -38,10 +48,29 @@
     text-overflow: ellipsis;
 }
 
+.container-scroll {
+    overflow: none;
+    position: relative;
+    height: 70vh;
+    border: 1px solid #ccc;
+    /* margin: 10px; */
+    background-color: #e6eaec;
+}
+
+.content-scroll {
+    overflow: auto;
+    position: absolute;
+    width: 100%;
+    max-height: 100%;
+}
+
 @media (min-width: 600px) {
     .dev-list-item {
-        margin: 20px;
+        
         border: 1px solid #d5d8df;
         border-radius: 4px;
+    }
+    .container-scroll {
+        margin: 50px;
     }
 }
