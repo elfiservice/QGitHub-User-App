@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { searchSingleDevOnGithub, } from '../actions/devDetailsActions'
 
 class DevDetails extends Component {
     render() {
@@ -12,4 +14,11 @@ class DevDetails extends Component {
     }
 }
 
-export default DevDetails
+function mapStateToProps ({ devDetailsData }) {
+    return {
+        devDetailsData
+    }
+  }
+  
+export default connect(mapStateToProps, { searchSingleDevOnGithub })(DevDetails)
+  
