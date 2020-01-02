@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { connect } from 'react-redux'
-import { getCurrentLocationOfUser, mountMapToDeveloperSelected } from '../actions/appActions'
+import { getCurrentLocationOfUser, } from '../actions/appActions'
 import { loadGoogleApi } from '../utils/googleApi'
 import { BrowserRouter } from "react-router-dom";
 import Router from '../router'
@@ -41,4 +41,4 @@ function mapStateToProps ({ appData }) {
   }
 }
 
-export default connect(mapStateToProps, { getCurrentLocationOfUser, mountMapToDeveloperSelected })(App)
+export default connect(mapStateToProps, { getCurrentLocationOfUser })(App)

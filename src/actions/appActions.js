@@ -1,5 +1,4 @@
 export const SET_LOCATION_OF_USER = 'SET_LOCATION_OF_USER'
-export const SET_POSITION_OF_DEV = 'SET_POSITION_OF_DEV'
 
 export function getCurrentLocationOfUser() {
     if (navigator.geolocation) {
@@ -86,46 +85,5 @@ function setLocationOfUser(nameOfTheCity) {
     return {
         type: SET_LOCATION_OF_USER,
         nameOfTheCity
-    }
-}
-
-export function mountMapToDeveloperSelected(address) {
-    return dispatch => {
-        let map
-        let geocoder
-        if(window.google !== undefined) {
-
-            geocoder = new window.google.maps.Geocoder();
-            map = new window.google.maps.Map(document.getElementById('map'), {
-                zoom: 8
-            });
-
-            geocoder.geocode( { 'address': address}, function(results, status) {
-                if (status === 'OK') {
-                    map.setCenter(results[0].geometry.location);
-                    var marker = new window.google.maps.Marker({
-                        map: map,
-                        position: results[0].geometry.location
-                    });
-
-                    dispatch(setPositionOfDEV(results[0].geometry.location))
-                } else {
-                    alert('Geocode was not successful for the following reason: ' + status);
-                    dispatch(setPositionOfDEV('Error occured'))
-                }
-            });
-
-        } else {
-            dispatch(setPositionOfDEV('Error on Google Api'))
-        }
-
-    
-     }
-}
-
-function setPositionOfDEV(position) {
-    return {
-        type: SET_POSITION_OF_DEV,
-        position
     }
 }

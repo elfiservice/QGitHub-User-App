@@ -1,7 +1,8 @@
-import { SET_SINGLE_DEV_DATA, } from '../actions/devDetailsActions'
+import { SET_SINGLE_DEV_DATA, SET_POSITION_OF_DEV } from '../actions/devDetailsActions'
 
 const INITIAL_STATE = {
     devData: null,
+    positionOfDev: null
 }
 
 function devDetailsData (state = INITIAL_STATE, action) {
@@ -11,7 +12,11 @@ function devDetailsData (state = INITIAL_STATE, action) {
                         ...state,
                         devData: action.devData,
                     }
-                   
+        case SET_POSITION_OF_DEV :
+            return {
+                        ...state,
+                        positionOfDev: action.position,
+                    }
         default :
             return state
     }

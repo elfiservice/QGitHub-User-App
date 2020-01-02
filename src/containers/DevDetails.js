@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { searchSingleDevOnGithub, setSingleDevData } from '../actions/devDetailsActions'
+import { searchSingleDevOnGithub, setSingleDevData, mountMapToDeveloperSelected } from '../actions/devDetailsActions'
 import Loader from '../components/LoaderGif'
 import InfoCardOfDev from '../components/InfoCardOfDev'
 
@@ -18,7 +18,9 @@ class DevDetails extends Component {
             <section className="dev-details-container">
                 {(!this.props.devDetailsData.devData 
                 ? <Loader />
-                : <InfoCardOfDev devData={this.props.devDetailsData.devData } />)} 
+                : <InfoCardOfDev 
+                    devData={this.props.devDetailsData.devData }
+                    mountMapToDeveloperSelected={this.props.mountMapToDeveloperSelected} />)} 
             </section>
         )
     }
@@ -30,5 +32,5 @@ function mapStateToProps ({ devDetailsData }) {
     }
 }
   
-export default connect(mapStateToProps, { searchSingleDevOnGithub, setSingleDevData })(DevDetails)
+export default connect(mapStateToProps, { searchSingleDevOnGithub, setSingleDevData, mountMapToDeveloperSelected })(DevDetails)
   

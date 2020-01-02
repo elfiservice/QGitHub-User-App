@@ -20,11 +20,13 @@ const InfoCardOfDev = (props) => {
 
             <div className="info-card-dev info-card-dev__bio">
                 {(!devData.bio 
-                    ? 'He have nothing to say about himself yet, but He have a ' + devData.public_repos + ' publics repos.' 
-                    : devData.bio + '. And he have a ' + devData.public_repos + ' publics repos, ' + devData.followers + ' followers and following ' + devData.following + ' devs.' )}
+                    ? 'He have nothing to say about himself yet, but this Dev have a ' + devData.public_repos + ' publics repos, ' + devData.followers + ' followers and following ' + devData.following + ' devs.' 
+                    : devData.bio + '. And this Dev have a ' + devData.public_repos + ' publics repos, ' + devData.followers + ' followers and following ' + devData.following + ' devs.' )}
             </div>
             <div className="info-card-dev info-card-dev__map">
-                    mapa 
+                {(!devData.location 
+                    ? "This Dev not sharing your location :("
+                    : <div id="map"></div>)}
             </div>
         </article>
     )
