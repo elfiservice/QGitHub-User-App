@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { searchSingleDevOnGithub, setSingleDevData } from '../actions/devDetailsActions'
 import Loader from '../components/LoaderGif'
+import InfoCardOfDev from '../components/InfoCardOfDev'
 
 class DevDetails extends Component {
     componentDidMount() {
@@ -17,7 +18,7 @@ class DevDetails extends Component {
             <section className="dev-details-container">
                 {(!this.props.devDetailsData.devData 
                 ? <Loader />
-                : this.props.devDetailsData.devData.name)} 
+                : <InfoCardOfDev devData={this.props.devDetailsData.devData } />)} 
             </section>
         )
     }

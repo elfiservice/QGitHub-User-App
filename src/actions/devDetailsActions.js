@@ -7,7 +7,6 @@ export function searchSingleDevOnGithub(username) {
         setTimeout(() =>  {
             return getUserData(username)
                 .then(result => {
-                    console.log(result);
                     dispatch(setSingleDevData(result))
                 })   
        } , 1500) 

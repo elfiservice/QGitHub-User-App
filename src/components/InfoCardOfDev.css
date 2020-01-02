@@ -1,0 +1,30 @@
+.info-card-dev-container {
+    color: var(--cor-black);
+}
+
+.info-card-dev-container
+.dev-avatar {
+    width: 100px;
+    height: 100px;
+}
+
+.info-card-dev__color-blue {
+    color: var(--cor-blue);
+}
+
+.info-card-dev {
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 1px 1px 3px #aaafb3;
+}
+
+.info-card-dev-container .fa-link {
+    margin: 0 10px;
+    padding: 10px;
+    background-color: var(--cor-blue);
+    color: var(--cor-white);
+    border-radius: 50%;
+    font-size: 14px;
+}

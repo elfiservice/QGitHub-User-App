@@ -1,9 +1,19 @@
 #map {
     height: 200px;
     width: 200px;
-  }
-  html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.dev-avatar {
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
