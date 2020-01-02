@@ -9,8 +9,8 @@ export default props => (
             <Home />
         )} />
 
-        <Route exact path={'/dev/:username'} render={() => (
-            <DevDetails  />
+        <Route exact path={'/dev/:username'} render={(urlData) => (
+            <DevDetails urlData={urlData} />
         )} />
 
         <Redirect from="*" to="/" />

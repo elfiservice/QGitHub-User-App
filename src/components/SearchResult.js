@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import './SearchResult.css'
+import { Link } from 'react-router-dom'
 
+// todo: tornar clicavel para ir para pagina de detalhes do usuario dev
 class SearchResult extends Component {
     _mountContent() {
         const { listOfDevs } = this.props.searchData
@@ -33,7 +35,10 @@ class SearchResult extends Component {
                         }} />
                         <div className='dev-details'> 
                             <p>{dev.login}</p>
-                        </div> 
+                        </div>
+                        <Link to={'/dev/' + dev.login}>
+                            More Details
+                        </Link> 
                     </li>)
                 })}
             </ol>

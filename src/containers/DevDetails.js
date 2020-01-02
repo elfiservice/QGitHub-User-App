@@ -2,8 +2,12 @@ import React, { Component } from 'react'
 
 class DevDetails extends Component {
     render() {
+
+        let devUserName = this.props.urlData.match.params.username
         return (
-            <div> detalhees </div>
+            <section className="dev-details-container">
+                detalhees: {devUserName} 
+            </section>
         )
     }
 }
