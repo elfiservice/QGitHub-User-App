@@ -1,7 +1,8 @@
-import { getUserData, } from '../utils/githubApi'
+import { getUserData, getUserReporStarred } from '../utils/githubApi'
 
 export const SET_SINGLE_DEV_DATA = 'SET_SINGLE_DEV_DATA'
 export const SET_POSITION_OF_DEV = 'SET_POSITION_OF_DEV'
+export const SET_REPORS_STARRED_OF_DEV = 'SET_REPORS_STARRED_OF_DEV'
 
 export function searchSingleDevOnGithub(username) {
     return dispatch => {
@@ -12,6 +13,7 @@ export function searchSingleDevOnGithub(username) {
                     if(result.location) {
                         dispatch(mountMapToDeveloperSelected(result.location))
                     }
+                    dispatch(searchReporStarredOnGithub(result.login))
                 })   
        } , 1500) 
     }
@@ -24,7 +26,7 @@ export function setSingleDevData(devData) {
     }
 }
 
-export function mountMapToDeveloperSelected(address) {
+function mountMapToDeveloperSelected(address) {
     return dispatch => {
         let map
         let geocoder
@@ -38,7 +40,7 @@ export function mountMapToDeveloperSelected(address) {
             geocoder.geocode( { 'address': address}, function(results, status) {
                 if (status === 'OK') {
                     map.setCenter(results[0].geometry.location);
-                    var marker = new window.google.maps.Marker({
+                    new window.google.maps.Marker({
                         map: map,
                         position: results[0].geometry.location
                     });
@@ -62,5 +64,17 @@ function setPositionOfDEV(position) {
     return {
         type: SET_POSITION_OF_DEV,
         position
+    }
+}
+
+function searchReporStarredOnGithub(username) {
+    return dispatch => {
+        return getUserReporStarred(username)
+            .then(result => {
+                dispatch({
+                    type: SET_REPORS_STARRED_OF_DEV,
+                    result
+                })
+            })   
     }
 }

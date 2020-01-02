@@ -1,3 +1,12 @@
+#map {
+    height: 200px;
+    width: 100%;
+}
+
+.info-card-dev-container header {
+    text-align: center;
+}
+
 .info-card-dev-container {
     color: var(--cor-black);
 }
@@ -6,6 +15,7 @@
 .dev-avatar {
     width: 100px;
     height: 100px;
+    margin: 0 auto;
 }
 
 .info-card-dev__color-blue {
