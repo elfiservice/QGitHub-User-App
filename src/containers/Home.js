@@ -14,8 +14,13 @@ class Home extends Component {
     }
     
     _setHeightToResultSearchContainer() {
+        const widthBrowser = window.innerWidth
         const heightBrowser = window.innerHeight
-        const vhPercent = parseInt((1 - (252 / heightBrowser)) * 100)
+        let fixHeightContent = 252
+        if(widthBrowser > 769) {
+            fixHeightContent = 150
+        }
+        const vhPercent = parseInt((1 - (fixHeightContent / heightBrowser)) * 100)
         document.getElementById("search-result-scroll").style.height = vhPercent + "vh"
     }
     render() {
