@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import './SearchForm.css'
-import InputText from './inputs/TypeText'
+import InputText from '../inputs/TypeText'
 import { connect } from 'react-redux'
-import { handleInputChange, searchDevOnGithub } from '../actions/searchActions'
+import { handleInputChange, searchDevOnGithub } from '../../actions/searchActions'
 
 class SearchForm extends Component {
     _searchBtnClicked(e){

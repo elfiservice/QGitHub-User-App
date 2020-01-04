@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import SearchForm from '../components/SearchForm'
-import SearchResult from '../components/SearchResult'
+import SearchForm from '../components/Home/SearchForm'
+import SearchResult from '../components/Home/SearchResult'
 import './Home.css'
 
 class Home extends Component {

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const PersonalInfo = (props) => {
     return (
         <div className="card">
-            <Link className="info-card-dev-back-btn" to={'/'}><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i></Link> 
+            <Link className="info-card-dev-back-btn" to={'/'}><i className="fa fa-arrow-circle-o-left" aria-hidden="true"></i></Link> 
             <header>
                 <div className='dev-avatar' style={{
                     backgroundImage: `url(${props.devData.avatar_url})`

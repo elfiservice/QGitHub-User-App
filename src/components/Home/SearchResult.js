@@ -2,34 +2,35 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import './SearchResult.css'
 import { Link } from 'react-router-dom'
-import Loader from './LoaderGif'
+import Loader from '../LoaderGif'
+import MsgToUser from './MsgToUser'
 
 class SearchResult extends Component {
     _mountContent() {
         const { listOfDevs } = this.props.searchData
         if(!listOfDevs) {
             return (
-                <div className="search-result_msg-to-user">
+                <MsgToUser>
                     <i className="search-result_txt-muted">Type a name or username that we'll search a Dev for you</i>
-                </div>
+                </MsgToUser>
             )
         } else if(listOfDevs === 'searching') {
             return (
-                <div className="search-result_msg-to-user">
+                <MsgToUser>
                     <Loader />
-                </div>
+                </MsgToUser>
             )
         } else if(listOfDevs === 'error') {
             return (
-                <div className="search-result_msg-to-user">
+                <MsgToUser>
                     <b className="search-result_txt-muted">An error occurred while trying to access Github. Please try again later.</b>
-                </div>
+                </MsgToUser>
             )
         } else if(listOfDevs.length <= 0) {
             return (
-                <div className="search-result_msg-to-user">
+                <MsgToUser>
                     <b className="search-result_txt-muted">No devs found, try another name or username ;)</b>
-                </div>
+                </MsgToUser>
             )
         } else {
             return (
