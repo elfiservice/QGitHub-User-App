@@ -36,9 +36,9 @@ class SearchResult extends Component {
                         <div className='dev-details'> 
                             <p>{dev.login}</p>
                         </div>
-                        <Link to={'/dev/' + dev.login}>
-                            More Details
-                        </Link> 
+                        <div className='dev-btn-more-details'>
+                            <Link className="btn btn-primary" to={'/dev/' + dev.login}>More Details</Link> 
+                        </div>
                     </li>)
                 })}
             </ol>
