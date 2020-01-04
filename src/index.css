@@ -4,6 +4,7 @@
   --cor-white: #fff;
   --cor-danger: #d04949;
   --cor-cta: #4CAF50;
+  --cor-yellow: rgb(175, 165, 76);
 }
 
 body {
@@ -22,3 +23,10 @@ code {
     monospace;
 }
 
+.card {
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 1px 1px 3px #aaafb3;
+}

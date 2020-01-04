@@ -1,4 +1,4 @@
-#map {
+.info-card-dev__map #map {
     height: 200px;
     width: 100%;
 }
@@ -22,14 +22,6 @@
     color: var(--cor-blue);
 }
 
-.info-card-dev {
-    padding: 20px;
-    margin: 10px;
-    border-radius: 10px;
-    background: white;
-    box-shadow: 1px 1px 3px #aaafb3;
-}
-
 .info-card-dev-container .fa-link {
     margin: 0 10px;
     padding: 10px;
@@ -37,4 +29,12 @@
     color: var(--cor-white);
     border-radius: 50%;
     font-size: 14px;
+}
+
+.info-card-dev__list-of-sttared-repos ul {
+    list-style: none;
+}
+
+.info-card-dev__list-of-sttared-repos .fa-star {
+    color: var(--cor-yellow);
 }
