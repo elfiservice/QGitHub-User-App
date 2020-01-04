@@ -9,6 +9,7 @@ import React from 'react'
 */
 const TypeText = (props) => (
     <input 
+        className={props.className}
         aria-label={props.placeholder} 
         id={props.name} 
         name={props.name}  

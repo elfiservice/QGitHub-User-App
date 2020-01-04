@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './SearchForm.css'
 import InputText from './inputs/TypeText'
 import { connect } from 'react-redux'
 import { handleInputChange, searchDevOnGithub } from '../actions/searchActions'
@@ -11,9 +12,10 @@ class SearchForm extends Component {
   
     render() {
         return (
-            <div className="center-block">
-                <form className="search-place-form" onSubmit={(e) => {this._searchBtnClicked(e)}}>
+            <div className="search-form-container">
+                <form className="search-form" onSubmit={(e) => {this._searchBtnClicked(e)}}>
                     <InputText
+                        className="form-control"
                         name="search" 
                         placeholder="Search by name or username"
                         type="search"
@@ -24,8 +26,8 @@ class SearchForm extends Component {
 
                     <button 
                         type="submit" 
-                        className="submit btn btn-cta search-btn"
-                        ><i className="fa fa-search" aria-hidden="true"></i>
+                        className="submit btn btn-lg btn-success search-btn"
+                        ><i className="fa fa-search" aria-hidden="true"></i> Search on GitHub
                         </button>
                 </form>
             </div>

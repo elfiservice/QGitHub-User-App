@@ -40,12 +40,13 @@
 }
 
 .container-scroll {
+    border-radius: 10px;
     overflow: none;
     position: relative;
     height: 70vh;
     border: 1px solid #ccc;
     /* margin: 10px; */
-    background-color: #e6eaec;
+    background-color: white;
 }
 
 .content-scroll {
