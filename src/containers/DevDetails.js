@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './DevDetails.css'
 import { connect } from 'react-redux'
 import { searchSingleDevOnGithub, setSingleDevData, } from '../actions/devDetailsActions'
 import Loader from '../components/LoaderGif'
@@ -17,7 +18,7 @@ class DevDetails extends Component {
         return (
             <section className="dev-details-container">
                 {(!this.props.devDetailsData.devData 
-                ? <Loader />
+                ? <div className="dev-details-loader"><Loader /></div>
                 : <InfoCardOfDev 
                     devDetailsData={this.props.devDetailsData } />)} 
             </section>

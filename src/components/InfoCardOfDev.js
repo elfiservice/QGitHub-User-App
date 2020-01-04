@@ -1,11 +1,13 @@
 import React from 'react'
 import './InfoCardOfDev.css'
+import { Link } from 'react-router-dom'
 
 const InfoCardOfDev = (props) => {
     const { devData, reposSttaredList } = props.devDetailsData
     return (
         <article className="info-card-dev-container">
             <div className="card">
+            <Link className="info-card-dev-back-btn" to={'/'}><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i></Link> 
                 <header>
                     <div className='dev-avatar' style={{
                         backgroundImage: `url(${devData.avatar_url})`
