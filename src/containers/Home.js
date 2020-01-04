@@ -6,9 +6,11 @@ import './Home.css'
 class Home extends Component {
     componentDidMount() {
         this._setHeightToResultSearchContainer()
-        window.addEventListener("resize", () => {
-            this._setHeightToResultSearchContainer()
-        });
+        window.addEventListener("resize", this._setHeightToResultSearchContainer);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener("resize", this._setHeightToResultSearchContainer);
     }
     
     _setHeightToResultSearchContainer() {
