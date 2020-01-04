@@ -19,6 +19,12 @@ class SearchResult extends Component {
                     <Loader />
                 </div>
             )
+        } else if(listOfDevs === 'error') {
+            return (
+                <div className="search-result_msg-to-user">
+                    <b className="search-result_txt-muted">An error occurred while trying to access Github. Please try again later.</b>
+                </div>
+            )
         } else if(listOfDevs.length <= 0) {
             return (
                 <div className="search-result_msg-to-user">

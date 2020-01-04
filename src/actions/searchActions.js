@@ -12,16 +12,17 @@ export function handleInputChange(query) {
 
 export function searchDevOnGithub(searchTerm) {
     return dispatch => {
-        dispatch(setSeachingMsg())
+        dispatch(setSeachingMsg('searching'))
         setTimeout(() =>  {
             return searchUsersByFullname(searchTerm)
                 .then(result => {
                     if(result.total_count === 0) {
                         dispatch(searchDevOnGithubByLogin(searchTerm))
                     } else {
-                        dispatch({type: SET_LIST_OF_DEVS, listOfDevs: result.items })
+                        dispatch(setSeachingMsg(result.items))
                     } 
-                })   
+                })
+                .catch(error => dispatch(setSeachingMsg('error')))  
        } , 1500) 
     }
 }
@@ -30,15 +31,16 @@ function searchDevOnGithubByLogin(searchTerm) {
     return dispatch => {
        return searchUsersByLogin(searchTerm)
         .then(result => {
-            dispatch({type: SET_LIST_OF_DEVS, listOfDevs: result.items })
+            dispatch(setSeachingMsg(result.items))
         })
+        .catch(error => dispatch(setSeachingMsg('error')))
     }
 
 }
 
-function setSeachingMsg() {
+function setSeachingMsg(data) {
     return {
         type: SET_LIST_OF_DEVS,
-        listOfDevs: 'searching'
+        listOfDevs: data
     }
 }
