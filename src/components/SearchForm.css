@@ -5,3 +5,10 @@
 .search-form .search-btn {
     margin: 10px 0;
 }
+
+@media (min-width: 769px) {
+    .search-form-container {
+        width: 39%;
+        padding-right: 1%;
+    }
+}

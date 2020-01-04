@@ -20,6 +20,8 @@
     background: white;
     display: flex;
     margin: 20px;
+    border-bottom: 1px solid #d5d8df;
+    border-radius: 4px;
 }
   
 .dev-details {
@@ -62,13 +64,8 @@
     justify-content: center;
 }
 
-@media (min-width: 600px) {
-    .dev-list-item {
-        
-        border: 1px solid #d5d8df;
-        border-radius: 4px;
-    }
-    .container-scroll {
-        margin: 50px;
+@media (min-width: 769px) {
+    .search-result-content {
+        width: 60%;
     }
 }

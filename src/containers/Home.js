@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import SearchForm from '../components/SearchForm'
 import SearchResult from '../components/SearchResult'
+import './Home.css'
 
 class Home extends Component {
     componentDidMount() {
