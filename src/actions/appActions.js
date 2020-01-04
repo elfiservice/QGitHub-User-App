@@ -1,47 +1,41 @@
 export const SET_LOCATION_OF_USER = 'SET_LOCATION_OF_USER'
+export const SET_LAT_LNG_OF_USER = 'SET_LAT_LNG_OF_USER'
 
 export function getCurrentLocationOfUser() {
     if (navigator.geolocation) {
-        return locationIsSuported()
+       return locationIsSuported()
     } else {
-        alert("O seu navegador não suporta Geolocalização!")
-        const latlon = '0,0'
-        return {
-            type: SET_LOCATION_OF_USER,
-            latlon
-            }
+        alert("Browser does not suport Geolocation!")
+        return setLocationOfUser('a mistery :P')
     }
 }
 
 function locationIsSuported() {
     return dispatch => {
-       return navigator.geolocation.getCurrentPosition(position => {
+        return navigator.geolocation.getCurrentPosition(position => {
             //const latlon = position.coords.latitude + "," + position.coords.longitude;
             dispatch(getNameOfTheUsersCity(position.coords.latitude, position.coords.longitude))
 
-         }, showError);
+         }, error => showError(error, dispatch));
     }
-    function showError(error) {
+    function showError(error, dispatch) {
         switch(error.code) {
             case error.PERMISSION_DENIED:
-                alert("Solicitação de geolocalização negada! :o  Favor tentar novamente.")
+                alert("Geolocation request denied! Please give the browser permission to access your location.")
                 break;
             case error.POSITION_UNAVAILABLE:
-                alert("Ops! Informações de localização indisponíveis no momento. Favor tentar novamente. :)")
+                alert("Ops! Location information currently unavailable. Please try again later.")
                 break;
             case error.TIMEOUT:
-                alert("Tempo excedido, talvez seja a conexão com a Internet. Favor tentar novamente :)")
+                alert("Timeout, maybe it's the Internet connection. Please try again later.")
                 break;
             case error.UNKNOWN_ERROR:
-                alert("Ops! Um error desconhecido aconteceu ao tentar obter sua localização atual. Favor tentar novamente :)")
+                alert("Ops! An unknown error happened while trying to get your current location. Please try again. :)")
                 break;
             default:
-            alert("Ops! Algo desconhecido ao tentar lhe localizar ocorreu. Favor tentar novamente :)")
+            alert("Ops! Something went wrong trying to locate you. Please try again.")
         }
-        return {
-            type: SET_LOCATION_OF_USER,
-            latlon: 'error'
-         }
+        return dispatch(setLocationOfUser('a mistery :P'))
     }
 }
 
@@ -68,14 +62,15 @@ function getNameOfTheUsersCity(lat, lng) {
                 var place = results[0];
                 let placeSplited = place.formatted_address.split(',')
                     const nameOfTheCity = placeSplited[2]
-                    dispatch (setLocationOfUser(nameOfTheCity))
+                    dispatch(setLocationOfUser(nameOfTheCity))
+                    dispatch(setLAtLngOfUser(lat, lng))
                    
                 } else {
-                    dispatch (setLocationOfUser('not found'))
+                    dispatch(setLocationOfUser('not found'))
                 }
             }
         } else {
-            dispatch (setLocationOfUser('Error trying Google Api'))
+            dispatch(setLocationOfUser('Error trying Google Api'))
         }
     
     }
@@ -84,6 +79,14 @@ function getNameOfTheUsersCity(lat, lng) {
 function setLocationOfUser(nameOfTheCity) {
     return {
         type: SET_LOCATION_OF_USER,
-        nameOfTheCity
+        nameOfTheCity,
+    }
+}
+
+function setLAtLngOfUser(lat, lng) {
+    return {
+        type: SET_LAT_LNG_OF_USER,
+        lat,
+        lng
     }
 }
