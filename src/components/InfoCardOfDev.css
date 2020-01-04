@@ -43,3 +43,13 @@
 .info-card-dev__list-of-sttared-repos .fa-star {
     color: var(--cor-yellow);
 }
+
+@media (min-width: 769px) {
+    .info-card-dev-flex {
+        display: flex;
+        justify-content: space-around;
+    }
+    .info-card-dev-flex50 {
+        width: 49%;
+    }
+}
