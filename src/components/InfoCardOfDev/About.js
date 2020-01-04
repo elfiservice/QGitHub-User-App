@@ -5,8 +5,16 @@ const About = (props) => {
         <div className="card info-card-dev__bio">
             <h4>About</h4>
             {(!props.devData.bio 
-                ? 'It\'s nothing to say about himself yet, but this Dev have a ' + props.devData.public_repos + ' publics repos, ' + props.devData.followers + ' followers and following ' + props.devData.following + ' devs.' 
-                : props.devData.bio + '. And this Dev have a ' + props.devData.public_repos + ' publics repos, ' + props.devData.followers + ' followers and following ' + props.devData.following + ' devs.' )}
+                ?   <div>
+                        <p>It's nothing to say about himself yet.</p> 
+                        <p>but this Dev have a {props.devData.public_repos} publics repos, {props.devData.followers} followers and following {props.devData.following} devs.</p> 
+                    </div>
+                :   <div>
+                        <p>{props.devData.bio}</p> 
+                        <p>And this Dev have a {props.devData.public_repos} publics repos, {props.devData.followers} followers and following {props.devData.following} devs.</p> 
+                    </div>
+                
+                 )}
         </div>
     )
 }
