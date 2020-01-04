@@ -48,7 +48,7 @@ class SearchResult extends Component {
 
     render() {
         return (
-            <div className="search-result-content container-scroll">
+            <div id="search-result-scroll" className="search-result-content container-scroll">
                 <div className="messages content-scroll">
                     {this._mountContent()}
                 </div>

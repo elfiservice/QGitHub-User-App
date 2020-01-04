@@ -43,7 +43,7 @@
     border-radius: 10px;
     overflow: none;
     position: relative;
-    height: 70vh;
+    /* height: 55vh; */
     border: 1px solid #ccc;
     background-color: white;
 }
