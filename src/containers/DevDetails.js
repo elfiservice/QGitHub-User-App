@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './DevDetails.css'
 import { connect } from 'react-redux'
-import { searchSingleDevOnGithub, setSingleDevData, resetDevData, calculeOfDistanceBtUserAndDev } from '../actions/devDetailsActions'
+import { searchSingleDevOnGithub, setSingleDevData, resetDevData, calculeOfDistanceBtUserAndDev, drawDistanceBtUserAndDev } from '../actions/devDetailsActions'
 import Loader from '../components/LoaderGif'
 import InfoCardOfDev from '../components/InfoCardOfDev'
 
@@ -23,6 +23,15 @@ class DevDetails extends Component {
                 this.props.calculeOfDistanceBtUserAndDev(latLngOfUser, latLngOfDev)
             }
     }
+
+    _drawMapClick = (e) => {
+        e.preventDefault()
+        if(this.props.devDetailsData.distanceBtwUserAndDev) {
+            const latLngOfUser = this.props.appData.latLng
+            const latLngOfDev = this.props.devDetailsData.positionOfDev
+            this.props.drawDistanceBtUserAndDev(latLngOfUser, latLngOfDev)
+        }
+    }
     
     render() {
         return (
@@ -30,7 +39,7 @@ class DevDetails extends Component {
                 {(!this.props.devDetailsData.devData 
                 ? <div className="dev-details-loader"><Loader /></div>
                 : <InfoCardOfDev 
-                    devDetailsData={this.props.devDetailsData} />)} 
+                    devDetailsData={this.props.devDetailsData} drawMapClick={this._drawMapClick} />)} 
             </section>
         )
     }
@@ -43,5 +52,11 @@ function mapStateToProps ({ devDetailsData, appData }) {
     }
 }
   
-export default connect(mapStateToProps, { searchSingleDevOnGithub, setSingleDevData, resetDevData, calculeOfDistanceBtUserAndDev })(DevDetails)
+export default connect(mapStateToProps, 
+    { 
+        searchSingleDevOnGithub, 
+        setSingleDevData, 
+        resetDevData, 
+        calculeOfDistanceBtUserAndDev,
+        drawDistanceBtUserAndDev })(DevDetails)
   

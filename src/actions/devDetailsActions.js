@@ -5,6 +5,7 @@ export const SET_POSITION_OF_DEV = 'SET_POSITION_OF_DEV'
 export const SET_REPORS_STARRED_OF_DEV = 'SET_REPORS_STARRED_OF_DEV'
 export const RESET_DEV_DATA = 'RESET_DEV_DATA'
 export const SET_DIST_BETWEEN_USER_AND_DEV = 'SET_DIST_BETWEEN_USER_AND_DEV'
+export const DRAW_MAP = 'DRAW_MAP'
 
 export function searchSingleDevOnGithub(username) {
     return dispatch => {
@@ -104,5 +105,45 @@ export function calculeOfDistanceBtUserAndDev(userLatLng, devLatLng) {
             distanceBtwUserAndDev: distanceBtwUserAndDevKm
         })
 
+    }
+}
+
+export function drawDistanceBtUserAndDev(userLatLng, devLatLng) {
+    return dispatch => {
+        var marker1, marker2;
+        var geodesicPoly;
+        const googleMaps = window.google.maps
+        var map = new googleMaps.Map(document.getElementById('map'), {
+            zoom: 4,
+            center: devLatLng
+        });
+        marker1 = new googleMaps.Marker({
+            map: map,
+            position: userLatLng
+        });
+
+        marker2 = new googleMaps.Marker({
+            map: map,
+            position: devLatLng
+        });
+        var bounds = new googleMaps.LatLngBounds(
+            marker1.getPosition(), marker2.getPosition());
+        map.fitBounds(bounds);
+
+        geodesicPoly = new googleMaps.Polyline({
+            strokeColor: '#CC0099',
+            strokeOpacity: 1.0,
+            strokeWeight: 3,
+            geodesic: true,
+            map: map
+        });
+
+        var path = [marker1.getPosition(), marker2.getPosition()];
+        geodesicPoly.setPath(path);
+        var heading = googleMaps.geometry.spherical.computeHeading(path[0], path[1]);
+        dispatch({
+            type: DRAW_MAP,
+            heading
+        })
     }
 }

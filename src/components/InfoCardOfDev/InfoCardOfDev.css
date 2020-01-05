@@ -8,6 +8,10 @@
     width: 100%;
 }
 
+.info-card-dev__map .btn-primary {
+    margin-left: 5px;
+}
+
 .info-card-dev-container header {
     text-align: center;
 }

@@ -1,10 +1,16 @@
-import { SET_SINGLE_DEV_DATA, SET_POSITION_OF_DEV, SET_REPORS_STARRED_OF_DEV, RESET_DEV_DATA, SET_DIST_BETWEEN_USER_AND_DEV } from '../actions/devDetailsActions'
+import { SET_SINGLE_DEV_DATA, 
+        SET_POSITION_OF_DEV, 
+        SET_REPORS_STARRED_OF_DEV, 
+        RESET_DEV_DATA, 
+        SET_DIST_BETWEEN_USER_AND_DEV,
+        DRAW_MAP } from '../actions/devDetailsActions'
 
 const INITIAL_STATE = {
     devData: null,
     positionOfDev: null,
     reposSttaredList: [],
-    distanceBtwUserAndDev: null
+    distanceBtwUserAndDev: null,
+    drawMap: null
 }
 
 function devDetailsData (state = INITIAL_STATE, action) {
@@ -29,13 +35,19 @@ function devDetailsData (state = INITIAL_STATE, action) {
                         ...state,
                         distanceBtwUserAndDev: action.distanceBtwUserAndDev,
                     }
+        case DRAW_MAP :
+            return {
+                        ...state,
+                        drawMap: action.heading,
+                    }
         case RESET_DEV_DATA :
             return {
                         ...state,
                         devData: null,
                         positionOfDev: null,
                         reposSttaredList: [],
-                        distanceBtwUserAndDev: null
+                        distanceBtwUserAndDev: null,
+                        drawMap: null
                     }
         default :
             return state

@@ -14,7 +14,7 @@ const InfoCardOfDev = (props) => {
                     <PersonalInfo devData={devData} />
                 </div>
                 <div className="info-card-dev-flex50">
-                    <MapLocation devData={devData} distanceBtwUserAndDev={distanceBtwUserAndDev} />
+                    <MapLocation devData={devData} distanceBtwUserAndDev={distanceBtwUserAndDev} drawMapClick={props.drawMapClick} />
                 </div>
             </div>
             <div className="info-card-dev-flex">

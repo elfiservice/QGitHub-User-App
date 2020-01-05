@@ -9,7 +9,8 @@ const MapLocation = (props) => {
                         <h4>Dev location</h4>
                         {(props.distanceBtwUserAndDev &&
                             <p>
-                                You are <b>{props.distanceBtwUserAndDev} Km</b> away from this Dev
+                                You are <b>{props.distanceBtwUserAndDev} Km</b> away from this Dev 
+                                <button className="btn btn-primary" onClick={props.drawMapClick} >Draw</button>
                             </p>
                             )}
                         <div id="map"></div>
