@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/QGitHub-User-App/static/css/main.0d140265.chunk.css",
-    "main.js": "/QGitHub-User-App/static/js/main.3cea5d54.chunk.js",
-    "main.js.map": "/QGitHub-User-App/static/js/main.3cea5d54.chunk.js.map",
+    "main.js": "/QGitHub-User-App/static/js/main.73cb7b94.chunk.js",
+    "main.js.map": "/QGitHub-User-App/static/js/main.73cb7b94.chunk.js.map",
     "runtime-main.js": "/QGitHub-User-App/static/js/runtime-main.86b2be00.js",
     "runtime-main.js.map": "/QGitHub-User-App/static/js/runtime-main.86b2be00.js.map",
     "static/css/2.ba013e49.chunk.css": "/QGitHub-User-App/static/css/2.ba013e49.chunk.css",
     "static/js/2.c7188521.chunk.js": "/QGitHub-User-App/static/js/2.c7188521.chunk.js",
     "static/js/2.c7188521.chunk.js.map": "/QGitHub-User-App/static/js/2.c7188521.chunk.js.map",
     "index.html": "/QGitHub-User-App/index.html",
-    "precache-manifest.28eabb4dd42009394a46486f0342b045.js": "/QGitHub-User-App/precache-manifest.28eabb4dd42009394a46486f0342b045.js",
+    "precache-manifest.56b7d8f694001a0ff5d2a8a7a3d1bd3b.js": "/QGitHub-User-App/precache-manifest.56b7d8f694001a0ff5d2a8a7a3d1bd3b.js",
     "service-worker.js": "/QGitHub-User-App/service-worker.js",
     "static/css/2.ba013e49.chunk.css.map": "/QGitHub-User-App/static/css/2.ba013e49.chunk.css.map",
     "static/css/main.0d140265.chunk.css.map": "/QGitHub-User-App/static/css/main.0d140265.chunk.css.map",
@@ -21,6 +21,6 @@
     "static/css/2.ba013e49.chunk.css",
     "static/js/2.c7188521.chunk.js",
     "static/css/main.0d140265.chunk.css",
-    "static/js/main.3cea5d54.chunk.js"
+    "static/js/main.73cb7b94.chunk.js"
   ]
 }
