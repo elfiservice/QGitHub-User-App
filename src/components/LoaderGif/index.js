@@ -8,7 +8,7 @@ const LoaderGif = (props) => {
     if(domainUrl.split(':')[0] === 'localhost') {
         urlPath = url.split("/")[2]
     } else if(domainUrl.split(':')[0] === 'elfiservice.github.io') {
-        urlPath = url.split("/")[2] + '/papop-app'
+        urlPath = url.split("/")[2] + '/QGitHub-User-App'
     } else {
         urlPath = url.split("/")[2]
     }
