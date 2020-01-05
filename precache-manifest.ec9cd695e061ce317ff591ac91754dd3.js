@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5e36e9ba45e9a9e541d4a201aa3b54cd",
+    "revision": "ab0e7f530ffb966fe7e1096ee75ef06e",
     "url": "/QGitHub-User-App/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/QGitHub-User-App/static/css/2.ba013e49.chunk.css"
   },
   {
-    "revision": "d8b7356d445200860079",
+    "revision": "7b41e3f3ffa48a3820cb",
     "url": "/QGitHub-User-App/static/css/main.0d140265.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/QGitHub-User-App/static/js/2.c7188521.chunk.js.LICENSE"
   },
   {
-    "revision": "d8b7356d445200860079",
-    "url": "/QGitHub-User-App/static/js/main.ce9f744e.chunk.js"
+    "revision": "7b41e3f3ffa48a3820cb",
+    "url": "/QGitHub-User-App/static/js/main.7fc0784f.chunk.js"
   },
   {
     "revision": "6ef61f8fdf609ba4b833",
