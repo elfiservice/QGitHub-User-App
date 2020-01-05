@@ -5,6 +5,7 @@ import { getCurrentLocationOfUser, } from '../actions/appActions'
 import { loadGoogleApi } from '../utils/googleApi'
 import { BrowserRouter } from "react-router-dom";
 import Router from '../router'
+import Footer from '../components/Footer'
 
 class App extends Component {
   componentDidMount() {
@@ -28,7 +29,7 @@ class App extends Component {
           <BrowserRouter>
             <Router />
           </BrowserRouter>
-
+          <Footer />
           <div id="mapHidden"></div>
       </div>
       )
