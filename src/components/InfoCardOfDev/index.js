@@ -6,7 +6,7 @@ import About from './About'
 import ListOfSttaredRepos from './ListOfSttaredRepos'
 
 const InfoCardOfDev = (props) => {
-    const { devData, reposSttaredList } = props.devDetailsData
+    const { devData, reposSttaredList, distanceBtwUserAndDev } = props.devDetailsData
     return (
         <article className="info-card-dev-container">
             <div className="info-card-dev-flex">
@@ -14,7 +14,7 @@ const InfoCardOfDev = (props) => {
                     <PersonalInfo devData={devData} />
                 </div>
                 <div className="info-card-dev-flex50">
-                    <MapLocation devData={devData} />
+                    <MapLocation devData={devData} distanceBtwUserAndDev={distanceBtwUserAndDev} />
                 </div>
             </div>
             <div className="info-card-dev-flex">

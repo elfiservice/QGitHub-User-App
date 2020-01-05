@@ -3,6 +3,8 @@ import { getUserData, getUserReporStarred } from '../utils/githubApi'
 export const SET_SINGLE_DEV_DATA = 'SET_SINGLE_DEV_DATA'
 export const SET_POSITION_OF_DEV = 'SET_POSITION_OF_DEV'
 export const SET_REPORS_STARRED_OF_DEV = 'SET_REPORS_STARRED_OF_DEV'
+export const RESET_DEV_DATA = 'RESET_DEV_DATA'
+export const SET_DIST_BETWEEN_USER_AND_DEV = 'SET_DIST_BETWEEN_USER_AND_DEV'
 
 export function searchSingleDevOnGithub(username) {
     return dispatch => {
@@ -23,6 +25,13 @@ export function setSingleDevData(devData) {
     return {
         type: SET_SINGLE_DEV_DATA,
         devData
+    }
+}
+
+export function resetDevData() {
+    return {
+        type: RESET_DEV_DATA,
+        data: true
     }
 }
 
@@ -75,6 +84,25 @@ function searchReporStarredOnGithub(username) {
                     type: SET_REPORS_STARRED_OF_DEV,
                     result
                 })
+            })
+            .catch(error => {
+                dispatch({
+                    type: SET_REPORS_STARRED_OF_DEV,
+                    result: [{name: 'API error'}]
+                })
             })   
+    }
+}
+
+export function calculeOfDistanceBtUserAndDev(userLatLng, devLatLng) {
+    return dispatch => {
+
+        const distanceBtwUserAndDevMeters = window.google.maps.geometry.spherical.computeDistanceBetween(userLatLng, devLatLng);
+        const distanceBtwUserAndDevKm = parseInt(distanceBtwUserAndDevMeters / 1000)
+        dispatch({
+            type: SET_DIST_BETWEEN_USER_AND_DEV,
+            distanceBtwUserAndDev: distanceBtwUserAndDevKm
+        })
+
     }
 }

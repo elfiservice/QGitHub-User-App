@@ -1,5 +1,5 @@
 const APIKey = 'AIzaSyARC-a63vxOWRRAgpjnDYOndn_2fFLYhAo'
-const apiMapsUrl = "https://maps.googleapis.com/maps/api/js?key="+ APIKey +"&libraries=places"
+const apiMapsUrl = "https://maps.googleapis.com/maps/api/js?key="+ APIKey +"&libraries=places,geometry"
 
 export function loadGoogleApi() {
     return new Promise(resolve => {

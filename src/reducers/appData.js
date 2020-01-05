@@ -15,7 +15,7 @@ function appData (state = INITIAL_STATE, action) {
         case SET_LAT_LNG_OF_USER :
             return {
                         ...state,
-                        latLng: { lat: action.lat, lng: action.lng }
+                        latLng: action.latLng
                     }
             
         default :

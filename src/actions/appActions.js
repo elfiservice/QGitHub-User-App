@@ -63,7 +63,7 @@ function getNameOfTheUsersCity(lat, lng) {
                 let placeSplited = place.formatted_address.split(',')
                     const nameOfTheCity = placeSplited[2]
                     dispatch(setLocationOfUser(nameOfTheCity))
-                    dispatch(setLAtLngOfUser(lat, lng))
+                    dispatch(setLAtLngOfUser(userLocation))
                    
                 } else {
                     dispatch(setLocationOfUser('not found'))
@@ -83,10 +83,9 @@ function setLocationOfUser(nameOfTheCity) {
     }
 }
 
-function setLAtLngOfUser(lat, lng) {
+function setLAtLngOfUser(latLng) {
     return {
         type: SET_LAT_LNG_OF_USER,
-        lat,
-        lng
+        latLng
     }
 }
