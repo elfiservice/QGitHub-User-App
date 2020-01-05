@@ -1,5 +1,5 @@
-const APIKey = 'AIzaSyARC-a63vxOWRRAgpjnDYOndn_2fFLYhAo'
-const apiMapsUrl = "https://maps.googleapis.com/maps/api/js?key="+ APIKey +"&libraries=places,geometry"
+import { googleAPIKey } from './keys'
+const apiMapsUrl = "https://maps.googleapis.com/maps/api/js?key="+ googleAPIKey +"&libraries=places,geometry"
 
 export function loadGoogleApi() {
     return new Promise(resolve => {
