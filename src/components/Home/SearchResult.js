@@ -40,11 +40,13 @@ class SearchResult extends Component {
                         <div className='dev-avatar' style={{
                             backgroundImage: `url(${dev.avatar_url})`
                         }} />
-                        <div className='dev-details'> 
-                            <p>{dev.login}</p>
-                        </div>
-                        <div className='dev-btn-more-details'>
-                            <Link className="btn btn-primary" to={'/dev/' + dev.login}>More Details</Link> 
+                        <div className="dev-name-more-details">
+                            <div className='dev-details'> 
+                                <p>{dev.login}</p>
+                            </div>
+                            <div className='dev-btn-more-details'>
+                                <Link className="btn btn-primary" to={'/dev/' + dev.login}>More Details</Link> 
+                            </div>
                         </div>
                     </li>)
                 })}

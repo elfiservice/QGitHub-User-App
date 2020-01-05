@@ -63,8 +63,19 @@
     justify-content: center;
 }
 
+.dev-name-more-details {
+    width: 100%;
+    display: flex;
+}
+
 @media (min-width: 769px) {
     .search-result-content {
         width: 60%;
+    }
+}
+
+@media (max-width: 440px) {
+    .dev-name-more-details {
+        display: block;
     }
 }
