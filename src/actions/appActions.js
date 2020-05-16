@@ -3,10 +3,13 @@ export const SET_LAT_LNG_OF_USER = 'SET_LAT_LNG_OF_USER'
 
 export function getCurrentLocationOfUser() {
     if (navigator.geolocation) {
-       return locationIsSuported()
+       locationIsSuported()
     } else {
         alert("Browser does not suport Geolocation!")
-        return setLocationOfUser('a mistery :P')
+        setLocationOfUser('a mistery :P')
+    }
+    return {
+        type: "CHECKIN_SUPPORT_TO_GEOLOCATION",
     }
 }
 
