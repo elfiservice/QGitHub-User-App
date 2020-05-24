@@ -1,4 +1,5 @@
-import { SET_SEARCH_INPUT, SET_LIST_OF_DEVS } from '../actions/searchActions'
+import { SET_SEARCH_INPUT } from '../actions/searchActions'
+import { SET_LIST_OF_DEVS } from '../sagas/searchSaga'
 
 const INITIAL_STATE = {
     searchInput: '',
