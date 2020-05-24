@@ -1,4 +1,4 @@
-import { SET_LOCATION_OF_USER, SET_LAT_LNG_OF_USER } from '../actions/appActions'
+import { SET_LOCATION_OF_USER, SET_LAT_LNG_OF_USER } from '../sagas/appSaga'
 
 const INITIAL_STATE = {
     currentLocationOfUser: null,
