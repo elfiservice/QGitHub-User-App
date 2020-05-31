@@ -1,9 +1,7 @@
-import { SET_SINGLE_DEV_DATA, 
-        SET_POSITION_OF_DEV, 
-        SET_REPORS_STARRED_OF_DEV, 
-        RESET_DEV_DATA, 
-        SET_DIST_BETWEEN_USER_AND_DEV,
-        DRAW_MAP } from '../actions/devDetailsActions'
+import { RESET_DEV_DATA } from '../actions/devDetailsActions'
+import { SET_SINGLE_DEV_DATA, SET_REPORS_STARRED_OF_DEV, SET_POSITION_OF_DEV } from '../sagas/devDetailsSaga'
+import { SET_DIST_BETWEEN_USER_AND_DEV, DRAW_MAP } from '../sagas/drawMapSaga'
+
 
 const INITIAL_STATE = {
     devData: null,
