@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './DevDetails.css'
 import { connect } from 'react-redux'
-import { searchSingleDevOnGithub, setSingleDevData, resetDevData, calculeOfDistanceBtUserAndDev, drawDistanceBtUserAndDev } from '../actions/devDetailsActions'
+import { searchSingleDevOnGithub, resetDevData, calculeOfDistanceBtUserAndDev, drawDistanceBtUserAndDev } from '../actions/devDetailsActions'
 import Loader from '../components/LoaderGif'
 import InfoCardOfDev from '../components/InfoCardOfDev'
 
@@ -55,7 +55,6 @@ function mapStateToProps ({ devDetailsData, appData }) {
 export default connect(mapStateToProps, 
     { 
         searchSingleDevOnGithub, 
-        setSingleDevData, 
         resetDevData, 
         calculeOfDistanceBtUserAndDev,
         drawDistanceBtUserAndDev })(DevDetails)

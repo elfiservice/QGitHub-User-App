@@ -1,4 +1,4 @@
-import { call, put, select, takeLatest } from 'redux-saga/effects';
+import { call, put, takeLatest } from 'redux-saga/effects';
 
 import { GET_CURRENT_USER_LOCATION } from '../actions/appActions'
 
@@ -49,7 +49,6 @@ function checkLocation() {
         }
 
         function getNameOfTheUsersCity(lat, lng) {
-            console.log('no saga');
         
                 let map
                 let service;

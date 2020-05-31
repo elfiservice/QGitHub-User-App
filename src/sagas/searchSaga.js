@@ -1,4 +1,4 @@
-import { call, put, select, takeLatest } from 'redux-saga/effects';
+import { call, put, takeLatest } from 'redux-saga/effects';
 import { searchUsersByFullname, searchUsersByLogin } from '../utils/githubApi'
 
 import { HANDLER_SEARCH_LIST_OF_DEVS } from '../actions/searchActions'
