@@ -16,5 +16,6 @@ or
 ## Technology
 - ReactJs
 - Redux
+- Redux-Saga
 - [GitHub API](https://developer.github.com/v3/search/#search-users)
 - [Google Places API](https://developers-dot-devsite-v2-prod.appspot.com/maps/documentation/javascript/places?hl=pt)
