@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/QGitHub-User-App/static/css/main.0d140265.chunk.css",
-    "main.js": "/QGitHub-User-App/static/js/main.73cb7b94.chunk.js",
-    "main.js.map": "/QGitHub-User-App/static/js/main.73cb7b94.chunk.js.map",
+    "main.css": "/QGitHub-User-App/static/css/main.661f216c.chunk.css",
+    "main.js": "/QGitHub-User-App/static/js/main.8d1b586d.chunk.js",
+    "main.js.map": "/QGitHub-User-App/static/js/main.8d1b586d.chunk.js.map",
     "runtime-main.js": "/QGitHub-User-App/static/js/runtime-main.86b2be00.js",
     "runtime-main.js.map": "/QGitHub-User-App/static/js/runtime-main.86b2be00.js.map",
-    "static/css/2.ba013e49.chunk.css": "/QGitHub-User-App/static/css/2.ba013e49.chunk.css",
-    "static/js/2.c7188521.chunk.js": "/QGitHub-User-App/static/js/2.c7188521.chunk.js",
-    "static/js/2.c7188521.chunk.js.map": "/QGitHub-User-App/static/js/2.c7188521.chunk.js.map",
+    "static/css/2.7ff7f9e3.chunk.css": "/QGitHub-User-App/static/css/2.7ff7f9e3.chunk.css",
+    "static/js/2.a32464fe.chunk.js": "/QGitHub-User-App/static/js/2.a32464fe.chunk.js",
+    "static/js/2.a32464fe.chunk.js.map": "/QGitHub-User-App/static/js/2.a32464fe.chunk.js.map",
     "index.html": "/QGitHub-User-App/index.html",
-    "precache-manifest.56b7d8f694001a0ff5d2a8a7a3d1bd3b.js": "/QGitHub-User-App/precache-manifest.56b7d8f694001a0ff5d2a8a7a3d1bd3b.js",
+    "precache-manifest.06e101ef9ae77104cabd1cb92738085b.js": "/QGitHub-User-App/precache-manifest.06e101ef9ae77104cabd1cb92738085b.js",
     "service-worker.js": "/QGitHub-User-App/service-worker.js",
-    "static/css/2.ba013e49.chunk.css.map": "/QGitHub-User-App/static/css/2.ba013e49.chunk.css.map",
-    "static/css/main.0d140265.chunk.css.map": "/QGitHub-User-App/static/css/main.0d140265.chunk.css.map",
-    "static/js/2.c7188521.chunk.js.LICENSE": "/QGitHub-User-App/static/js/2.c7188521.chunk.js.LICENSE",
+    "static/css/2.7ff7f9e3.chunk.css.map": "/QGitHub-User-App/static/css/2.7ff7f9e3.chunk.css.map",
+    "static/css/main.661f216c.chunk.css.map": "/QGitHub-User-App/static/css/main.661f216c.chunk.css.map",
+    "static/js/2.a32464fe.chunk.js.LICENSE": "/QGitHub-User-App/static/js/2.a32464fe.chunk.js.LICENSE",
     "static/media/font-awesome.min.css": "/QGitHub-User-App/static/media/fontawesome-webfont.fee66e71.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.86b2be00.js",
-    "static/css/2.ba013e49.chunk.css",
-    "static/js/2.c7188521.chunk.js",
-    "static/css/main.0d140265.chunk.css",
-    "static/js/main.73cb7b94.chunk.js"
+    "static/css/2.7ff7f9e3.chunk.css",
+    "static/js/2.a32464fe.chunk.js",
+    "static/css/main.661f216c.chunk.css",
+    "static/js/main.8d1b586d.chunk.js"
   ]
 }

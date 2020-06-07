@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bae178a21f0eeed8454a97f35edab297",
+    "revision": "388bd993192e5d6e26c73361e82ff5e5",
     "url": "/QGitHub-User-App/index.html"
   },
   {
-    "revision": "42c789cb2f30b7b3ebec",
-    "url": "/QGitHub-User-App/static/css/2.ba013e49.chunk.css"
+    "revision": "1e6ebda38459153a7087",
+    "url": "/QGitHub-User-App/static/css/2.7ff7f9e3.chunk.css"
   },
   {
-    "revision": "2d3813cdad22cbe4f2e3",
-    "url": "/QGitHub-User-App/static/css/main.0d140265.chunk.css"
+    "revision": "c6021a0b6994d7241c63",
+    "url": "/QGitHub-User-App/static/css/main.661f216c.chunk.css"
   },
   {
-    "revision": "42c789cb2f30b7b3ebec",
-    "url": "/QGitHub-User-App/static/js/2.c7188521.chunk.js"
+    "revision": "1e6ebda38459153a7087",
+    "url": "/QGitHub-User-App/static/js/2.a32464fe.chunk.js"
   },
   {
     "revision": "e928fe768baa9832b5bc57eae021f30c",
-    "url": "/QGitHub-User-App/static/js/2.c7188521.chunk.js.LICENSE"
+    "url": "/QGitHub-User-App/static/js/2.a32464fe.chunk.js.LICENSE"
   },
   {
-    "revision": "2d3813cdad22cbe4f2e3",
-    "url": "/QGitHub-User-App/static/js/main.73cb7b94.chunk.js"
+    "revision": "c6021a0b6994d7241c63",
+    "url": "/QGitHub-User-App/static/js/main.8d1b586d.chunk.js"
   },
   {
     "revision": "6ef61f8fdf609ba4b833",
